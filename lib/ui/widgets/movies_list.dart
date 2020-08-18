@@ -74,8 +74,12 @@ class MovieCoverImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: Task 4
-    return Container(color: Colors.blue);
+    if (Image.network(movie.backdropUrl) == null)
+      return Container(color: Colors.blue);
+    return Hero(
+      tag: movie.title + movie.id.toString(),
+      child: Image.network(movie.backdropUrl),
+    );
   }
 }
 
