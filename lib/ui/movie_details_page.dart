@@ -118,10 +118,11 @@ class MovieDetailsInformation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO Task 8
+    movie.genres.map((e) => e.name).join(" / ");
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Center(
-        child: Text("TODO Task 8"),
+        child: Text(movie.genres.map((e) => e.name).join(" / ")),
       ),
     );
   }
