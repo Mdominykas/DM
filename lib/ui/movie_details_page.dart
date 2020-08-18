@@ -58,9 +58,7 @@ class MovieDetailsPage extends StatelessWidget {
   }
 
   _shareMovie() {
-    // TODO: Task 7
     Share.share(movie.webUrl);
-
   }
 }
 
