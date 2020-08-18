@@ -17,7 +17,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       appBar: AppBar(
         // TODO: Task 6
-        title: Text("Movies"),
+        title: Text(get_movie_name(context)),
         centerTitle: true,
         actions: <Widget>[
           IconButton(
@@ -47,6 +47,14 @@ class _MainPageState extends State<MainPage> {
         ],
       ),
     );
+  }
+
+  get_movie_name(BuildContext context)
+  {
+    if(_currentIndex!=1)
+      return "Discover Movies";
+    else
+      return "Popular Movies";
   }
 
   Widget getTabBody() {
